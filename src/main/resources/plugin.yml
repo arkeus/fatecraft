@@ -1,3 +1,10 @@
 name: Fatecraft
 main: io.arkeus.fatecraft.Fatecraft
 version: 0.0.1
+commands:
+  home:
+    description: Sets your hearth point.
+    usage: /<command>
+  hearth:
+    description: Hearths to your home point.
+    user: /<command>
