@@ -21,7 +21,7 @@ public class ExperienceListener extends FateListener<Fatecraft> {
 			user.gainExperience(Skill.ACROBATICS, 1);
 		}
 
-		user.gainExperience(Skill.ATHLETICS, event.getFrom().distance(event.getTo()));
+		user.gainExperience(Skill.ATHLETICS, event.getFrom().distance(event.getTo()) / 2);
 	}
 
 	@EventHandler(priority = EventPriority.MONITOR)
