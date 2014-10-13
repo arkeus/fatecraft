@@ -5,6 +5,7 @@ import io.arkeus.fate.command.FateCommand;
 import io.arkeus.fate.listener.FateListener;
 import io.arkeus.fatecraft.commands.HearthCommand;
 import io.arkeus.fatecraft.commands.HomeCommand;
+import io.arkeus.fatecraft.listeners.AcrobaticsListener;
 import io.arkeus.fatecraft.listeners.ExperienceListener;
 import io.arkeus.fatecraft.user.UserHandler;
 
@@ -15,7 +16,8 @@ import org.bukkit.event.Event;
 
 public class Fatecraft extends FatePlugin<Fatecraft> {
 	private static final List<Class<? extends FateListener<?>>> LISTENERS = Arrays.<Class<? extends FateListener<?>>>asList(
-			ExperienceListener.class
+			ExperienceListener.class,
+			AcrobaticsListener.class
 			);
 	private static final List<Class<? extends FateCommand<?>>> COMMANDS = Arrays.<Class<? extends FateCommand<?>>>asList(
 			HomeCommand.class,
