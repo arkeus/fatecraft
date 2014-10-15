@@ -34,11 +34,11 @@ public class Fatecraft extends FatePlugin<Fatecraft> {
 	public void onEnable() {
 		super.onEnable();
 
+		// Temporary
 		getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
 			@Override
 			public void run() {
 				getServer().getWorlds().get(0).setTime(0);
-				System.out.println("Resetting time");
 			}
 		}, 0, 10000);
 	}
