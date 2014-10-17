@@ -18,7 +18,7 @@ public class ExperienceListener extends FateListener<Fatecraft> {
 		final User user = getPlugin().getUsers().get(player.getUniqueId());
 
 		if (event.getPlayer().getVelocity().getY() <= 0 && event.getTo().getY() > event.getFrom().getY()) {
-			user.gainExperience(Skill.ACROBATICS, 1);
+			user.gainExperience(Skill.ACROBATICS, 1 * 100);
 		}
 
 		user.gainExperience(Skill.ATHLETICS, event.getFrom().distance(event.getTo()) / 2);

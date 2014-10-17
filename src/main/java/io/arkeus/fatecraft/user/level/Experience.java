@@ -3,7 +3,7 @@ package io.arkeus.fatecraft.user.level;
 public class Experience {
 	private int level;
 	private double xp;
-	private double xpm;
+	private final double xpm;
 
 	public Experience() {
 		this.level = 1;
@@ -17,7 +17,7 @@ public class Experience {
 		while (xp >= xpm) {
 			level++;
 			xp -= xpm;
-			xpm *= 1.1;
+			//xpm *= 1.1;
 			leveled = true;
 		}
 		return leveled;

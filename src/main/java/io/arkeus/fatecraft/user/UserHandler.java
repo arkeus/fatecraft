@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import org.bukkit.entity.Player;
+
 public class UserHandler {
 	private final Fatecraft fc;
 	private final Map<UUID, User> users;
@@ -22,5 +24,9 @@ public class UserHandler {
 			users.put(id, character);
 		}
 		return character;
+	}
+
+	public User get(final Player player) {
+		return get(player.getUniqueId());
 	}
 }
