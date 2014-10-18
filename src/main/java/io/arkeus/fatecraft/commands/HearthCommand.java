@@ -13,7 +13,7 @@ public class HearthCommand extends PlayerCommand {
 			if (sender.getBedSpawnLocation() != null) {
 				user.setHome(sender.getBedSpawnLocation());
 			} else {
-				getPlugin().getChat().send(sender.getUniqueId(), "You have not yet set a home position with the /hearth command.");
+				getPlugin().getChat().send(sender.getUniqueId(), "You have not yet set a home position with the /home command.");
 				return true;
 			}
 		}
