@@ -9,16 +9,11 @@ public class HearthCommand extends PlayerCommand {
 	@Override
 	public boolean onCommand(final Player sender, final Command command, final String label, final String[] args) {
 		final User user = getPlugin().getUsers().get(sender.getUniqueId());
-		if (user.getHome() == null) {
-			if (sender.getBedSpawnLocation() != null) {
-				user.setHome(sender.getBedSpawnLocation());
-			} else {
-				getPlugin().getChat().send(sender.getUniqueId(), "You have not yet set a home position with the /home command.");
-				return true;
-			}
+		if (user.hearth()) {
+			getPlugin().getChat().send(sender.getUniqueId(), "You close your eyes and feel your body whisked away.");
+		} else {
+			getPlugin().getChat().send(sender.getUniqueId(), "You must set your home location at a bed to gain the ability to hearth.");
 		}
-		user.hearth();
-		getPlugin().getChat().send(sender.getUniqueId(), "You close your eyes and feel your body whisked away.");
 		return true;
 	}
 

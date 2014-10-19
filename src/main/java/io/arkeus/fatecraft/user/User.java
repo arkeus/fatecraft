@@ -9,6 +9,7 @@ import io.arkeus.fatecraft.user.level.SkillHandler;
 import java.util.UUID;
 
 import org.bukkit.Location;
+import org.bukkit.entity.Player;
 
 public class User {
 	private final Fatecraft fc;
@@ -43,7 +44,13 @@ public class User {
 		return home;
 	}
 
-	public void hearth() {
-		fc.getServer().getPlayer(id).teleport(home);
+	public boolean hearth() {
+		final Player player =  fc.getServer().getPlayer(id);
+		if (player.getBedSpawnLocation() != null) {
+			player.teleport(player.getBedSpawnLocation());
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
