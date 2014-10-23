@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
 public class WeaponsListener extends FateListener<Fatecraft> {
 	@EventHandler(priority = EventPriority.MONITOR)
@@ -18,5 +19,8 @@ public class WeaponsListener extends FateListener<Fatecraft> {
 		final Player source = (Player) event.getDamager();
 		//final User user = getPlugin().getUsers().get(source);
 		getPlugin().getChat().send(source.getUniqueId(), "You damaged " + event.getEntity());
+		if (event.getCause() == DamageCause.ENTITY_ATTACK) {
+			getPlugin().getChat().send(source.getUniqueId(), "Damaged by attack");
+		}
 	}
 }
