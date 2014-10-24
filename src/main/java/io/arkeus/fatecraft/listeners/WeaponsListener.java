@@ -20,7 +20,7 @@ public class WeaponsListener extends FateListener<Fatecraft> {
 		//final User user = getPlugin().getUsers().get(source);
 		getPlugin().getChat().send(source.getUniqueId(), "You damaged " + event.getEntity());
 		if (event.getCause() == DamageCause.ENTITY_ATTACK) {
-			getPlugin().getChat().send(source.getUniqueId(), "Damaged by attack");
+			getPlugin().getChat().send(source.getUniqueId(), "Damaged by attack with item " + source.getItemInHand().getType());
 		}
 	}
 }
