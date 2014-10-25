@@ -2,5 +2,17 @@ package io.arkeus.fatecraft.user.level;
 
 public enum Skill {
 	ATHLETICS,
-	ACROBATICS
+	ACROBATICS,
+	// Gathering
+	MINING,
+	DIGGING,
+	WOODCUTTING,
+	// Professions
+	SMITHING,
+	FARMING,
+	FISHING,
+	// Battle
+	MELEE,
+	RANGED,
+	ARMOR,
 }
